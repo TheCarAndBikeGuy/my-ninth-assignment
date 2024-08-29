@@ -7,6 +7,7 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,17 +21,34 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <body className={inter.className}>
-        <img
-          className="TwitterLogo"
-            src="https://img.freepik.com/premium-photo/twitter-logo-icon-illustration-vector_895118-5895.jpg"
-            alt="Twitter Logo"
-          />
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
+          <header>
+            <h3> NoAhGrAm </h3>
+            <nav className="navigation">
+              <Link className="home" href="/">
+                Home
+              </Link>
+              <Link className="profile" href="/profile">
+                Profile
+              </Link>
+              <Link className="post" href="/post">
+                Posts&Reviews
+              </Link>
+              <Link className="profile" href="/add-game">
+                Add Post
+              </Link>
+              <Link className="profile" href="/add-review">
+                Add Review
+              </Link>
+              <SignInButton className="signIn" />
+              <SignedIn>
+              {/* <p>
+                Welcome {clerk?.id} {clerk?.lastName}
+              </p> */}
+                <UserButton />
+              </SignedIn>
+            </nav>
+          </header>
+          <SignedOut></SignedOut>
           {children}
         </body>
       </html>

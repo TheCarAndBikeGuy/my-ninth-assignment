@@ -1,17 +1,267 @@
+/* Page Style */
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
+  background-color: lightgray;
+}
+
+.Home {
+  text-align: center;
+}
+
+.title {
+  text-decoration: underline;
+  font-family: sans-serif;
+}
+
+.mini-title {
+  text-decoration: underline;
+}
+
+ul {
+  font-weight: bold;
+}
+/* Nav Bar */
+
+header {
+  display: flex;
+  width: 100vw;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  font-size: 20px;
+  border: 2px solid black;
+  background-color: black;
+  padding: 2px 3px;
+  position: relative;
+  height: auto;
+  padding: 10px;
+}
+
+.navigation {
+  display: flex;
+  gap: 30px;
+  margin-right: 30px;
+  flex-wrap: wrap;
+}
+
+.home {
+  text-decoration: none;
+  color: white;
+}
+
+.home:hover {
+  text-decoration: underline purple;
+  transition: 0.5s;
+}
+
+.profile {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.profile:hover {
+  text-decoration: underline purple;
+  transition: 0.5s;
+}
+
+.post {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.post:hover {
+  text-decoration: underline purple;
+  transition: 0.5s;
+}
+
+.signIn {
+  background-color: lightgrey;
+  border-radius: 10px;
+}
+
+.dropbtn {
+  background-color: black;
+  border-radius: 50px;
+  display: flex;
+  position: relative;
+  color: white;
+  padding: 16px;
+  font-size: 11px;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  left: 15px;
+}
+
+.order {
+  display: none;
+  position: relative;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-decoration: none;
+  color: black;
+  gap: 5px;
+}
+
+.order a {
+  display: flex;
+  gap: 5px;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.order a:hover::after {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .order {
+  display: inline;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
   background-color: black;
 }
 
-.TwitterLogo {
-  position: absolute;
+.images {
   display: flex;
-  width: 500px;
-  float: right;
-  margin-left: 100px;
-  top: 20%;
+  margin-left: 175px;
+  gap: 2rem;
+  width: 75px;
+  height: 100px;
+  text-align: center;
+}
+
+.gameOutput {
+  display: flex;
+  padding: 10px;
+  border: 2px solid black;
+  border-collapse: separate;
+  border-spacing: 20px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.prof {
+  text-align: center;
+  font-size: large;
+}
+
+.gameTitle {
+  position: relative;
+  left: 245px;
+  text-decoration: underline;
+}
+
+.gameForm {
+  padding: 12px 20px;
+  margin: 8px;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: black;
+  max-width: 600px;
+  width: fit-content;
+}
+
+.name {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.creator {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.rating {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.gameId {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.review {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.username {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.submitBtn {
+  align-items: center;
+  width: 100%;
+  background-color: lightcyan;
+  padding: 20px;
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.submitBtn:hover {
+  background-color: white;
+  color: black;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  background: #262626;
+  color: white;
+  margin-top: 500px;
+  font-weight: 300;
+  font-size: 15px;
 }
