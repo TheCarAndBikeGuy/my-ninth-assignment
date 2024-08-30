@@ -3,20 +3,20 @@ import { NoUser } from "../components/NoUser";
 import { ProfileForm } from "../components/ProfileForm";
 import { db } from "@/lib/db";
 import { UserButton } from "@clerk/nextjs";
-import Footer from "../footer/page";
+
 
 export default async function ProfilePage() {
-  const user = await currentUser();
+  const clerk = await currentUser();
 
   // if the user ISN'T signed in with clerk, don't carry on, just tell them to sign in
-  if (!user) {
+  if (!clerk) {
     return <NoUser />;
   }
 
   // check the database to see if there is a profile with this clerk_id
   const response = await db.query(
     `SELECT * FROM profiles WHERE clerk_id = $1`,
-    [user.id]
+    [clerk.id]
   );
 
   // if we don't have a profile, give the form to add one
@@ -27,7 +27,15 @@ export default async function ProfilePage() {
   // if we DO have a profile, show the details
   const profile = response.rows[0];
 
+  const myStyle = {
+    backgroundImage:
+      "url('https://external-preview.redd.it/048HY1vXFxjEn2ChEDofRrSA4AhpVQUWE6d8T9Yu318.jpg?auto=webp&s=b2489f68dbd609c62c067b6ac920730c703dbd84')",
+    height: "100vh",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+  };
   return (
+
     <div className="prof">
       <h1>
         <UserButton />
@@ -37,3 +45,5 @@ export default async function ProfilePage() {
     </div>
   );
 }
+
+// https://i.pinimg.com/originals/53/1a/c0/531ac020d6b8b8c72380e5debf10ed4f.jpg

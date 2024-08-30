@@ -6,17 +6,16 @@ export default async function ReviewDisplay({ gameID }) {
   ]);
   const reviews = review.rows;
   console.log(reviews.rows);
-  
   return (
     <div>
       <p>Reviews: </p>
 
       {reviews.map(function (review) {
         return (
-          <div className="reviewsOutput">
-            <p key={review.id}>
-              {review.username} - {review.review} 
-            </p>
+          <div key={review.id} className="reviewsOutput">
+            <div>
+              {review.game_id} - {review.username} - {review.review}{" "}
+            </div>
           </div>
         );
       })}

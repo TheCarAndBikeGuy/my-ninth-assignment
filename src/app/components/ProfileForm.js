@@ -20,11 +20,13 @@ export async function ProfileForm() {
 
   return (
     <div>
-      <h2>Please Create your profile</h2>
+      <h2 className="profileCreate">Please Create your profile</h2>
       <form action={handleAddProfile}>
-        <input name="username" placeholder="Username" />
-        <input name="bio" placeholder="Bio" />
-        <button>Create Profile</button>
+        <div className="gameForm">
+          <input className="username" placeholder="Username" name="username" />
+          <input className="creator" placeholder="Bio" name="bio" />
+          <button className="submitBtn">Create Profile</button>
+        </div>
       </form>
     </div>
   );
