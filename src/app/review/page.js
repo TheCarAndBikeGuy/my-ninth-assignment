@@ -1,4 +1,5 @@
 import { db } from "@/lib/db";
+import { SignInButton, SignedOut } from "@clerk/nextjs";
 
 export default async function ReviewDisplay({ gameID }) {
   const review = await db.query("SELECT * FROM reviews WHERE game_id = $1", [

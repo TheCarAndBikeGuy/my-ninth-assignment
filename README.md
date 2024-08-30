@@ -34,3 +34,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+<!-- I managed to achieve mainly everything, aside from the /user/[userId] however I think I managed to achieve eberything else. I managed to get the comments to display on the page, and for you to be able to comment on the things on the page. I didnt manage to add the /user/[userid] but I feel as though I added it elsewhere. I believe I did well with the css, but i feel as though I could have added some media to it, to make it neater on the phone. I did encounter a few bugs but it turned out to be spelling mistakes or I missed a word out so they were quite easily sorted. -->

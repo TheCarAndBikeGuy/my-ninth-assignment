@@ -67,7 +67,7 @@ export default async function AddGamePage() {
               {game.id} - {game.name} - {game.creator} - {game.rating}/10
             </p>
           </div>
-        ); 
+        );
       })}
     </div>
   );

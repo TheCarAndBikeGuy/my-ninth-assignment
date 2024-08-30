@@ -31,7 +31,7 @@ export default async function Home({ searchParams }) {
       {games.map(function (game) {
         return (
           <div key={game.id} className="gameOutput">
-             <h6>{game.username ? game.username : "Annonymous"}</h6>
+            <h6>{game.username ? game.username : "Annonymous"}</h6>
             <p>
               {game.id} - {game.name} - {game.creator} - {game.rating}/10 -{" "}
             </p>
