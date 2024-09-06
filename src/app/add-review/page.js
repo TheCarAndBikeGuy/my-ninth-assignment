@@ -47,7 +47,6 @@ export default function ReviewForm() {
 
       <SignedOut>
         <p>
-          {" "}
           You Must <SignInButton /> to add a review
         </p>
       </SignedOut>
